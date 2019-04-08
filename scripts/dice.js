@@ -37,8 +37,32 @@ document.querySelector('.btn-roll').addEventListener('click', function(){
     diceDom.style.display = 'block';
     diceDom.src = 'images/dice-' + dice + '.png';
     
+    // update the roundScore if not 1
+    if (dice !=1) { // (dice>1)
+        roundScore += dice;
+    }
+    
     // current score of active player
     document.querySelector('#current-'+activePlayer).textContent = dice;
 console.log(dice);
     
 })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
