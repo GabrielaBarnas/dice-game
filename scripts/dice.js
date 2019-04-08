@@ -40,13 +40,65 @@ document.querySelector('.btn-roll').addEventListener('click', function(){
     // update the roundScore if not 1
     if (dice !=1) { // (dice>1)
         roundScore += dice;
+    // current score of active player
+    document.querySelector('#current-'+activePlayer).textContent = roundScore;
+    } else {
+        document.querySelector('#current-'+activePlayer).textContent = 0;
+
+        activePlayer == 0 ? activePlayer = 1 : activePlayer = 0; // if acvitePlayer is 0 then the activePlayer should be 1 else activePlayer is 0
+        roundScore = 0;
+        
+        document.querySelector('.player-0-panel').classList.toggle('active');
+        document.querySelector('.player-1-panel').classList.toggle('active');
+
     }
     
-    // current score of active player
-    document.querySelector('#current-'+activePlayer).textContent = dice;
-console.log(dice);
-    
 })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
