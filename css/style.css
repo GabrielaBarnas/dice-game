@@ -135,7 +135,7 @@ button:focus {
 .winner {
     background-color: cornsilk;
 }
-.winner .player-name {
+.winner .player-name, .winner .player-score {
     font-weight: 700;
     color: mediumaquamarine;
 }
