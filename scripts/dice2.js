@@ -55,6 +55,26 @@ document.querySelector('.btn-roll').addEventListener('click', function(){
     
 })
 
+// hold button
+document.querySelector('.btn-hold').addEventListener('click', function(){
+    // transfer current score to global score
+    scores[activePlayer] += roundScore;
+    
+    // DOM manipulation, update the UI
+    document.querySelector('#score-'+activePlayer).textContent = scores[activePlayer];
+    
+    // check to see if the player won game
+    // if f: switch to other player
+    // if t: get rid of active indicator, change text to say winner
+    // both: 0 out of the score
+    if(scores[activePlayer]>=20){
+        document.querySelector('#name-'+activePlayer).textContent = 'Winner!'; // change text of player1/2 to winner
+        document.querySelector('.dice').style.display = 'none'; // hide dice
+        document.querySelector('.player-'+activePlayer+'-panel').classList.add('winner');
+        document.querySelector('.player-'+activePlayer+'-panel').classList.remove('active');
+    }
+})
+
 
 
 

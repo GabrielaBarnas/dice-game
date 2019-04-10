@@ -132,6 +132,13 @@ button:focus {
     box-shadow: 0 10px 60px rgba(0,0,0,.1);
     transform: translateX(-50%);
 }
+.winner {
+    background-color: cornsilk;
+}
+.winner .player-name {
+    font-weight: 700;
+    color: mediumaquamarine;
+}
 
 
 
